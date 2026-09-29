@@ -1,0 +1,71 @@
+{
+  "schema": "gooo/metaprogramming-intent-decision/v1",
+  "intent_id": "clamp_value",
+  "laya": {
+    "intent_id": "clamp_value",
+    "receipt": {
+      "schema": "gooo/typed-decision-receipt/v1",
+      "mode": "laya",
+      "selected": "boolean_switch",
+      "provider": "laya",
+      "model": "laya-rl-agent",
+      "model_revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+      "routing": {
+        "detection": {
+          "diacritic_rate": 0,
+          "is_english": false,
+          "language": null,
+          "language_undecided": true,
+          "mixed_segment": null,
+          "non_latin_fraction": 1,
+          "script": "hangul",
+          "script_profile": {
+            "hangul": 1
+          }
+        },
+        "model": "multilingual",
+        "reason": "non-Latin script (hangul, 100% of letters); the English checkpoint cannot read it",
+        "repo": "convaiinnovations/laya/multilingual",
+        "workflow": null
+      },
+      "probabilities": {
+        "assigned_ladder": 0.077,
+        "assigned_switch": 0.0585,
+        "boolean_switch": 0.2753,
+        "closure_branch": 0.0451,
+        "finite_domain_map": 0.1294,
+        "guard_returns": 0.0317,
+        "if_else_ladder": 0.1236,
+        "partial_assignment": 0.2267,
+        "predicate_helpers": 0.0237,
+        "predicate_table": 0.0091
+      },
+      "confidence": 0.1495,
+      "answer_confidence": 0.2753,
+      "request_sha256": "sha256:ddaba8bb82bd3badea50b5a1c87ad5ff0562499d4676d1e5ff8efce79ffad230"
+    },
+    "top1_route": "boolean_switch",
+    "sampled_route": "partial_assignment",
+    "sample_seed": "sha256:9bb4290742410c1d47c547016d5c58eca0cbd990c4a1b8c6c7fb5695020090f9",
+    "latency_ms": 114.345
+  },
+  "deterministic_fallback": {
+    "intent_id": "clamp_value",
+    "receipt": {
+      "schema": "gooo/typed-decision-receipt/v1",
+      "mode": "deterministic_fallback",
+      "selected": "guard_returns",
+      "fallback_reason": "NOT_CONFIGURED",
+      "provider": "deterministic",
+      "request_sha256": "sha256:ddaba8bb82bd3badea50b5a1c87ad5ff0562499d4676d1e5ff8efce79ffad230"
+    },
+    "top1_route": "guard_returns",
+    "sampled_route": "guard_returns",
+    "sample_seed": "sha256:eea232d17d4035ce9583efbbaaed72c468bef622bebd9436ec357ed04329e9fd",
+    "latency_ms": 5.004
+  },
+  "source_report_sha256": {
+    "laya": "sha256:5fdb3ab209e68edfdd406e7ca3d586f4d16fb9792ec8062daca884f96a5d4672",
+    "deterministic_fallback": "sha256:7d89ecb76f2df569c10852df76f4fbf11bbaa733edca4b71a14a23e2d08c4277"
+  }
+}
